@@ -17,8 +17,9 @@
 ## manipulation
 - manipulation of actors should not induce coupling to the actor types
   themselves, but only to specific components
-- it should not be hard to get relevant data from an actor given certain
-  information about its type
+- it should not be hard to get relevant data from an actor from one or
+  more components
+- it should not be difficult to call methods on other components
 
 ## release
 - it should not be hard to signal/identify when an actor is dead
