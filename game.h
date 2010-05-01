@@ -7,7 +7,7 @@
 typedef struct _game_s game_s;
 
 typedef enum {
-    CALLBACK_FREE,
+    CALLBACK_RELEASE,
 
     FIRST_DRAW_CALLBACK,
     CALLBACK_DRAW_SETUP = FIRST_DRAW_CALLBACK,
@@ -27,7 +27,7 @@ typedef enum {
 typedef void (*callback_f)(game_s *game, actor_s *actor, void *component);
 
 game_s *make_game();
-void free_game(game_s *game);
+void release_game(game_s *game);
 
 kernel_scene_s *game_scene(game_s *game);
 

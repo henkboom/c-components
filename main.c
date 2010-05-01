@@ -13,7 +13,7 @@ int main()
 
     kernel_start(game_scene(game));
 
-    free_game(game);
+    release_game(game);
     game = NULL;
 
     return 0;

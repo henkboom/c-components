@@ -67,8 +67,16 @@ game_s *make_game()
     return game;
 }
 
-void free_game(game_s *game)
+void release_game(game_s *game)
 {
+    call_callbacks(game, CALLBACK_RELEASE, CALLBACK_RELEASE);
+
+    int callback_type;
+    for(callback_type = 0; callback_type != CALLBACK_COUNT; callback_type++)
+    {
+        sbfree(game->callbacks[callback_type]);
+    }
+
     free(game);
 }
 

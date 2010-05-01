@@ -21,6 +21,11 @@ static void update(game_s *game, actor_s *actor, void *component)
     sprite->time++;
 }
 
+static void release(game_s *game, actor_s *actor, void *component)
+{
+    free(component);
+}
+
 sprite_s * make_sprite(
     game_s *game,
     actor_s *actor,
@@ -30,6 +35,7 @@ sprite_s * make_sprite(
     sprite->transform = transform;
     sprite->time = 0;
 
+    game_register_callback(game, actor, sprite, CALLBACK_RELEASE, release);
     game_register_callback(game, actor, sprite, CALLBACK_DRAW, draw);
     game_register_callback(game, actor, sprite, CALLBACK_UPDATE, update);
 
