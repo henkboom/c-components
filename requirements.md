@@ -1,48 +1,45 @@
 # Requirements
 
-## measurement
-- it should not be hard to measure performance
-- it should not be hard to determing blame for poor performance
+## performance
+- performance measurement
+- performance blame according to actors/components
+- actor and component management shouldn't have too high an overhead
+- memory use of actors and components shouldn't be overly wasteful
 
-## speed
-- actor and component management should not have too high an overhead
+## game management
+- extensible execution phases
+- scene transitions
 
-## memory
-- memory use of actors and components should not be overly wasteful
+## actor initialization
+- easy actor instantiation
+- components initialization arguments in actor instantiation
 
-## initialization
-- it should not be bothersome to create actors
-- it should not be hard to give actors' components initialization arguments
+## actor manipulation
+- low coupling between actors by using components as interfaces
+- getting information from an actor
+- easily calling component methods
+- components need access to their enclosing actor
+- components need access to their enclosing game
 
-## manipulation
-- manipulation of actors should not induce coupling to the actor types
-  themselves, but only to specific components
-- it should not be hard to get relevant data from an actor from one or
-  more components
-- it should not be difficult to call methods on other components
-
-## release
-- it should not be hard to signal/identify when an actor is dead
-- actors should not be left allocated when they are no longer needed
-- it should not be difficult to deallocate memory belonging to actors
-- it should not be difficult to deallocate memory belonging to components
+## actor release
+- signaling actor death
+- finding out about actor death
+- timely release of dead actors
+- release of components belonging to dead actors
 
 ## safety
-- it should not be too easy to have dangling pointers to actors
-- it should not be too easy to have dangling pointers to components
-- it should not be hard to specify and enforce interface contracts
+- there should be no dangling pointers to actors
+- there should be no dangling pointers to components
+- specification and enforcement of component interface contracts
+- specification and enforcement of dependencies between components
 
 ## design
-- it should not be hard to add new actor types
-- it should not be difficult to add new components
-- it should not be hard to change components to reflect changes in requirements
+- easy addition of new actor types
+- easy addition of new components
+- easy modification of existing components
 
 ## documentation
-- it should not be too hard to document the purpose and functioning of actors
-- it should not be too hard to document the purpose and functioning of
-  components
-- it should not be too hard to document relationships between actors and
-  components within a larger system
-- it should not be too hard to partition actors and components based on
-  function
-- it should not be hard to specify and enforce dependencies between components
+- documentation of purpose and functioning of actors
+- documentation of purpose and functioning of components
+- documentation of actor-component relationships within a larger system
+- flexible organization/categorization of actors and components
