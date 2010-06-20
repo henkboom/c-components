@@ -5,7 +5,7 @@
 #include "game.h"
 #include "actors/player.h"
 
-int main()
+int main(void)
 {
     game_s *game = make_game();
 

@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-actor_s * make_actor()
+actor_s * make_actor(void)
 {
     actor_s *actor = (actor_s *)malloc(sizeof(actor_s));
 

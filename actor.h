@@ -6,7 +6,7 @@ typedef struct {
     int _marked_dead;
 } actor_s;
 
-actor_s * make_actor();
+actor_s * make_actor(void);
 
 void release_actor(actor_s *actor);
 

@@ -2,8 +2,8 @@
 #define KERNEL_H
 
 typedef struct {
-    void (*update)();
-    void (*draw)();
+    void (*update)(void *data);
+    void (*draw)(void *data);
     void *data;
 } kernel_scene_s;
 

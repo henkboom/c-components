@@ -26,7 +26,7 @@ typedef enum {
 
 typedef void (*callback_f)(game_s *game, actor_s *actor, void *component);
 
-game_s *make_game();
+game_s *make_game(void);
 void release_game(game_s *game);
 
 kernel_scene_s *game_scene(game_s *game);

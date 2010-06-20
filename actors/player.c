@@ -7,7 +7,7 @@
 
 void make_player(game_s *game)
 {
-    actor_s *actor = make_actor(game);
+    actor_s *actor = make_actor();
     game_register_actor(game, actor);
 
     transform_s *transform = make_transform(game, actor);

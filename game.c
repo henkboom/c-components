@@ -145,7 +145,7 @@ static void draw(void *data)
     call_callbacks(game, FIRST_DRAW_CALLBACK, LAST_DRAW_CALLBACK);
 }
 
-game_s *make_game()
+game_s *make_game(void)
 {
     game_s *game = (game_s *)malloc(sizeof(game_s));
 
