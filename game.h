@@ -31,6 +31,8 @@ void release_game(game_s *game);
 
 kernel_scene_s *game_scene(game_s *game);
 
+void game_register_actor(game_s *game, actor_s *actor);
+
 void game_register_callback(
     game_s *game,
     actor_s *actor,

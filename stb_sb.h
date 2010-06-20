@@ -4,6 +4,7 @@
 #define sbcount(a)        ((a) ? stb__sbn(a) : 0)
 #define sbadd(a,n)        (stb__sbmaybegrow(a,n), stb__sbn(a)+=(n), &(a)[stb__sbn(a)-(n)])
 #define sblast(a)         ((a)[stb__sbn(a)-1])
+#define sbrem(a, n)       ((n) ? stb__sbn(a)-=(n), 0 : 0)
 
 #include <stdlib.h>
 #define stb__sbraw(a) ((int *) (a) - 2)

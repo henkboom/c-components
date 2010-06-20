@@ -1,6 +1,7 @@
 TARGET=game
 
-OBJ=game.o \
+OBJ=actor.o \
+	game.o \
 	kernel.o  \
 	main.o  \
 	actors/player.o \

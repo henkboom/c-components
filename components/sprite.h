@@ -4,7 +4,10 @@
 #include "game.h"
 #include "components/transform.h"
 
-typedef struct _sprite_s sprite_s;
+typedef struct {
+    transform_s *transform;
+    int time;
+} sprite_s;
 
 sprite_s * make_sprite(
     game_s *game,

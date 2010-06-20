@@ -7,7 +7,8 @@
 
 void make_player(game_s *game)
 {
-    actor_s *actor = (actor_s *)malloc(sizeof(actor_s));
+    actor_s *actor = make_actor(game);
+    game_register_actor(game, actor);
 
     transform_s *transform = make_transform(game, actor);
     sprite_s *sprite = make_sprite(game, actor, transform);

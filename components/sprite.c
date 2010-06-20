@@ -3,11 +3,6 @@
 #include <GL/gl.h>
 #include <stdlib.h>
 
-struct _sprite_s {
-    transform_s *transform;
-    int time;
-};
-
 static void draw(game_s *game, actor_s *actor, void *component)
 {
     sprite_s *sprite = (sprite_s *)component;
@@ -19,6 +14,7 @@ static void update(game_s *game, actor_s *actor, void *component)
 {
     sprite_s *sprite = (sprite_s *)component;
     sprite->time++;
+    if(sprite->time == 100) actor->dead = 1;
 }
 
 static void release(game_s *game, actor_s *actor, void *component)

@@ -3,7 +3,11 @@
 
 typedef struct {
     int dead;
-    int paused;
+    int _marked_dead;
 } actor_s;
+
+actor_s * make_actor();
+
+void release_actor(actor_s *actor);
 
 #endif
